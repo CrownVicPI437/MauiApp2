@@ -1,0 +1,16 @@
+﻿@page "/"
+
+
+
+<h1>Hello, world!</h1>
+
+<MudForm IsTouchedChanged="@State.ReportState.OnTouched" @ref="MudForm" Class="col-md-12">
+    <FluentValidationValidator @ref="State.ReportState.FluentValidationValidator"/>
+   
+</MudForm>
+ 
+@code
+ {
+     [Inject] IMarsApplicationStateManager State { get; set; }
+     MudForm MudForm = new MudForm();
+ }
